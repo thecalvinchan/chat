@@ -1,0 +1,17 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  socket: /tmp/mysql.sock
+  pool: 5
+
+test:
+  <<: *default
+  database: g_chat_test
+  username: root
+  password:
+
+development:
+  <<: *default
+  database: g_chat_development
+  username: root
+  password:
